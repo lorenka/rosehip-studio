@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Team on Rosehip Studio</title>
+    <link>/team/</link>
+    <description>Recent content in Team on Rosehip Studio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 20 Dec 2018 13:44:30 +1000</lastBuildDate><atom:link href="/team/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lorraine Sawicki</title>
+      <link>/team/lorraine-sawicki/</link>
+      <pubDate>Mon, 19 Nov 2018 10:47:58 +1000</pubDate>
+      
+      <guid>/team/lorraine-sawicki/</guid>
+      <description>Passionate about the food industry and advocate for data privacy, as a designer and software developer Lorraine is leading the way to help share food preferences and allergies between individuals and businesses.</description>
+    </item>
+    
+    <item>
+      <title>Maven</title>
+      <link>/team/maven/</link>
+      <pubDate>Thu, 20 Dec 2018 13:44:30 +1000</pubDate>
+      
+      <guid>/team/maven/</guid>
+      <description>As the committed guardian of our home office, Maven is skilled at loud barking and vigorous tail swishing.</description>
+    </item>
+    
+  </channel>
+</rss>

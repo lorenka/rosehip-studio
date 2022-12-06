@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Instagram",
+        "link": "https://instagram.com/rosehip.studio",
+        "image": "images/social/instagram.svg"
+    },
+    {
+        "name": "LinkedIn",
+        "link": "https://linkedin.com/in/rosehipstudio",
+        "image": "images/social/linkedin.svg"
+    }
+]

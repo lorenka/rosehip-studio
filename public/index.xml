@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homepage on Rosehip Studio</title>
+    <link>/</link>
+    <description>Recent content in Homepage on Rosehip Studio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 20 Dec 2018 13:44:30 +1000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Custom Software</title>
+      <link>/services/custom-software/</link>
+      <pubDate>Wed, 28 Nov 2018 15:14:39 +1000</pubDate>
+      
+      <guid>/services/custom-software/</guid>
+      <description>At the current time Rosehip Studio is working on iOS applications and websites using the Svelte framework.
+TastyMap TastyMap is Rosehip Studio&amp;rsquo;s first product to jump into the realm of software that connects and clarifies people&amp;rsquo;s food preferences.
+Working Together Please get in touch if you&amp;rsquo;d like to collaborate! We&amp;rsquo;re interested in design and technology that:
+ Actually solves a problem Changes the world for the better Has minimal impact on the environment Is functional and beautiful  </description>
+    </item>
+    
+    <item>
+      <title>Lorraine Sawicki</title>
+      <link>/team/lorraine-sawicki/</link>
+      <pubDate>Mon, 19 Nov 2018 10:47:58 +1000</pubDate>
+      
+      <guid>/team/lorraine-sawicki/</guid>
+      <description>Passionate about the food industry and advocate for data privacy, as a designer and software developer Lorraine is leading the way to help share food preferences and allergies between individuals and businesses.</description>
+    </item>
+    
+    <item>
+      <title>Maven</title>
+      <link>/team/maven/</link>
+      <pubDate>Thu, 20 Dec 2018 13:44:30 +1000</pubDate>
+      
+      <guid>/team/maven/</guid>
+      <description>As the committed guardian of our home office, Maven is skilled at loud barking and vigorous tail swishing.</description>
+    </item>
+    
+    <item>
+      <title>Data Visualization</title>
+      <link>/services/data-visualization/</link>
+      <pubDate>Sun, 18 Nov 2018 12:33:46 +1000</pubDate>
+      
+      <guid>/services/data-visualization/</guid>
+      <description>Data Visualization is the practice of taking data and using visual design to create clear and accurate represenations of the data in a way that lends itself to greater understanding.
+Objectives Financial accounting and financial reporting are often used as synonyms.
+ According to International Financial Reporting Standards: the objective of financial reporting is: To provide financial information that is useful to existing and potential investors, lenders and other creditors in making decisions about providing resources to the reporting entity.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Thu, 22 Feb 2018 17:01:34 +0700</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Lorem markdownum aequalis strigis. Saetigeri iubeas, vultu huic alvum nondum de obside ut laniavit arbor palmis, cum quin. Rupes vetat videndo, armigerae crimen habet Priamum nec.
+Ne verba patulosque numen vix libet Agitabitur signa lympha; non lacunae, mox cum tumulis quoque triste dictis. Ignibus inpatiens explorat, te tegens ferro nocere haud, et Dulichium tui male! Quo sed fuit flexit et hic die solido, gloria?
+ Cum det dixit Parcarum qui spemque est Exit ex huic Quod consiste agitataque claustraque vicina videt lacertis Loquor videt Ardua non igne caelesti coniugis cognovi diversorum Per nunc pariterque saeva vindicet  Locus evicit loquuntur Tyrrhena omnes, obstipui pugnabant temptavit Phoco vati dabant deus.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>/contact/</link>
+      <pubDate>Thu, 22 Feb 2018 17:01:34 +0700</pubDate>
+      
+      <guid>/contact/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>the Punk Lady Apple</title>
+      <link>/newsletter/</link>
+      <pubDate>Thu, 22 Feb 2018 17:01:34 +0700</pubDate>
+      
+      <guid>/newsletter/</guid>
+      <description>Rosehip Studio&amp;rsquo;s founder Lorraine dishes info on how to help you eat better. Become more creative and more productive with science-based strategies and a supportive learning community.
+Join our growing community and receive one weekly email. No spam, ever.</description>
+    </item>
+    
+  </channel>
+</rss>

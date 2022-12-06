@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Services on Rosehip Studio</title>
+    <link>/services/</link>
+    <description>Recent content in Services on Rosehip Studio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Nov 2018 15:14:39 +1000</lastBuildDate><atom:link href="/services/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Custom Software</title>
+      <link>/services/custom-software/</link>
+      <pubDate>Wed, 28 Nov 2018 15:14:39 +1000</pubDate>
+      
+      <guid>/services/custom-software/</guid>
+      <description>At the current time Rosehip Studio is working on iOS applications and websites using the Svelte framework.
+TastyMap TastyMap is Rosehip Studio&amp;rsquo;s first product to jump into the realm of software that connects and clarifies people&amp;rsquo;s food preferences.
+Working Together Please get in touch if you&amp;rsquo;d like to collaborate! We&amp;rsquo;re interested in design and technology that:
+ Actually solves a problem Changes the world for the better Has minimal impact on the environment Is functional and beautiful  </description>
+    </item>
+    
+    <item>
+      <title>Data Visualization</title>
+      <link>/services/data-visualization/</link>
+      <pubDate>Sun, 18 Nov 2018 12:33:46 +1000</pubDate>
+      
+      <guid>/services/data-visualization/</guid>
+      <description>Data Visualization is the practice of taking data and using visual design to create clear and accurate represenations of the data in a way that lends itself to greater understanding.
+Objectives Financial accounting and financial reporting are often used as synonyms.
+ According to International Financial Reporting Standards: the objective of financial reporting is: To provide financial information that is useful to existing and potential investors, lenders and other creditors in making decisions about providing resources to the reporting entity.</description>
+    </item>
+    
+  </channel>
+</rss>
