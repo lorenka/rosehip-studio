@@ -4,3 +4,6 @@
 [submodule "themes/hugo-creative-portfolio-theme"]
 	path = themes/hugo-creative-portfolio-theme
 	url = https://github.com/kishaningithub/hugo-creative-portfolio-theme
+[submodule "themes/hugo-serif-theme"]
+	path = themes/hugo-serif-theme
+	url = https://github.com/zerostaticthemes/hugo-serif-theme
