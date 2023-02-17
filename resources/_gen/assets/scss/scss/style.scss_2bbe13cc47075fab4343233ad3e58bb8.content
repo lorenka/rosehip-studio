@@ -4099,7 +4099,7 @@ ol {
     flex: 1 0 0; }
 
 .header {
-  color: #359e9e;
+  color: #FFFFFF;
   background-color: #000000;
   display: flex;
   justify-content: space-between;
@@ -4550,7 +4550,7 @@ ol {
 .intro-image-absolute {
   max-width: none;
   padding: 0;
-  margin-bottom: 30px; }
+  margin-bottom: 0px; }
   @media (min-width: 768px) {
     .intro-image-absolute {
       position: absolute;
