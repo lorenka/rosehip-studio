@@ -19,7 +19,7 @@ title = "Rosehip Studio"
     show_services_button = false # show / hide the "view all services" button
 
   [params.logo]
-    mobile = "images/logo/logo-mobile.svg"
+    mobile = "images/logo/logo_white_on_black.svg"
     mobile_height = "36px"
     desktop = "images/logo/logo_white_on_black.svg"
     desktop_height = "36px"
