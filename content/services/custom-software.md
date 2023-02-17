@@ -6,13 +6,13 @@ draft: false
 weight: 1
 ---
 
-At the current time Rosehip Studio is working on iOS applications and websites using the Svelte framework. 
+Rosehip Studio is working on products in the food and design industries to help make data easier to understand and share.
 
-## TastyMap 
+## Working! 
 
-TastyMap is Rosehip Studio's first product to jump into the realm of software that connects and clarifies people's food preferences. 
+Rosehip Studio's first product jumps into the realm of software that connects and clarifies people's food preferences. 
 
-## Working Together
+## Get in Touch
 
 Please get in touch if you'd like to collaborate! We're interested in design and technology that:
 
