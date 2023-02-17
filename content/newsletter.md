@@ -1,9 +1,9 @@
 ---
-title: 'Subscribe to the Rosehip Studio'
+title: 'Subscribe to Rosehip Studio'
 date: 2018-02-22T17:01:34+07:00
 ---
 
-## Lorraine dishes info on TastyMap's mission to help you eat better with others.
+## Lorraine dishes info on her mission to help you eat better with others.
 
 Become more creative and more productive with your food choices and compatibility.
 
