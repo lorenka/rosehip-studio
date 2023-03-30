@@ -50,7 +50,7 @@ title = "Rosehip Studio"
     summary_large_truncate = 230 # How many characters to include in the summary of the team bios (large layout) before truncating
 
   [params.footer]
-    copyright_text = 'Theme by <a class="zerostatic" href="https://www.zerostatic.io">www.zerostatic.io</a>'
+    copyright_text = '© Rosehip Studio LLC 2023'
 
 [menu]
   # Main Menu
