@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Services on Rosehip Studio</title>
+    <link>/services/</link>
+    <description>Recent content in Services on Rosehip Studio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Nov 2018 15:14:39 +1000</lastBuildDate><atom:link href="/services/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Custom Software</title>
+      <link>/services/custom-software/</link>
+      <pubDate>Wed, 28 Nov 2018 15:14:39 +1000</pubDate>
+      
+      <guid>/services/custom-software/</guid>
+      <description>Rosehip Studio is working on products in the food and design industries to help make data easier to understand and share.
+Working! Rosehip Studio&amp;rsquo;s first product jumps into the realm of software that connects and clarifies people&amp;rsquo;s food preferences.
+Get in Touch Please get in touch if you&amp;rsquo;d like to collaborate! We&amp;rsquo;re interested in design and technology that:
+Actually solves a problem Changes the world for the better Has minimal impact on the environment Is functional and beautiful </description>
+    </item>
+    
+  </channel>
+</rss>

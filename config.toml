@@ -56,19 +56,9 @@ title = "Rosehip Studio"
   # Main Menu
 
   [[menu.main]]
-    name = "TEAM"
-    url = "/team/"
-    weight = 1
-
-  [[menu.main]]
-    name = "NEWSLETTER"
-    url = "/newsletter"
-    weight = 2
-
-  [[menu.main]]
     name = "CONTACT"
     url = "/contact/"
-    weight = 3
+    weight = 1
 
   # Footer Menu
   [[menu.footer]]
