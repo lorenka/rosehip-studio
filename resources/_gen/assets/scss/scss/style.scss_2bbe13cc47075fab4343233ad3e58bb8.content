@@ -101,11 +101,11 @@ sup {
   top: -.5em; }
 
 a {
-  color: #359e9e;
+  color: #617a98;
   text-decoration: none;
   background-color: transparent; }
   a:hover {
-    color: #226565;
+    color: #435569;
     text-decoration: underline; }
 
 a:not([href]) {
@@ -4013,7 +4013,7 @@ html {
   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
     width: 36px;
     height: 3px;
-    background-color: #359e9e;
+    background-color: #617a98;
     border-radius: 3px;
     position: absolute;
     transition-property: transform;
@@ -4049,7 +4049,7 @@ html {
     transform: translate3d(0, -20px, 0) rotate(-90deg); }
 
 a {
-  color: #359e9e; }
+  color: #617a98; }
 
 p {
   line-height: 26px;
@@ -4099,7 +4099,7 @@ ol {
     flex: 1 0 0; }
 
 .header {
-  color: #359e9e;
+  color: #617a98;
   background-color: #000000;
   display: flex;
   justify-content: space-between;
@@ -4119,7 +4119,7 @@ ol {
   position: static; }
 
 .footer {
-  background: #359e9e;
+  background: #617a98;
   padding-top: 15px;
   padding-bottom: 15px; }
   .footer .footer-inner {
@@ -4176,7 +4176,7 @@ ol {
             height: 40px;
             padding: 10px 8px 10px 8px; } }
 .sub-footer {
-  background: #287878;
+  background: #4d6179;
   color: #ffffff;
   padding-top: 15px;
   padding-bottom: 15px; }
@@ -4237,7 +4237,7 @@ ol {
         display: inline-block;
         font-weight: normal;
         text-decoration: none;
-        color: #359e9e; }
+        color: #617a98; }
         .main-menu > ul > li > a:hover {
           text-decoration: underline; }
       .main-menu > ul > li.active > a {
@@ -4249,7 +4249,7 @@ ol {
 
 .main-menu-mobile {
   position: fixed;
-  background: #359e9e;
+  background: #617a98;
   top: 0;
   left: 0;
   width: 100%;
@@ -4329,7 +4329,7 @@ ol {
   .hamburger .hamburger-inner,
   .hamburger .hamburger-inner::before,
   .hamburger .hamburger-inner::after {
-    background: #359e9e; }
+    background: #617a98; }
   .hamburger .hamburger-inner::after {
     width: 18px;
     right: 0; }
@@ -4343,7 +4343,7 @@ ol {
   height: 40px;
   line-height: 40px;
   padding: 0 14px;
-  background: #359e9e;
+  background: #617a98;
   border-radius: 4px;
   font-size: 14px;
   font-weight: normal;
@@ -4355,7 +4355,7 @@ ol {
   transition: all 0.15s ease; }
   .button:hover {
     color: #ffffff;
-    background-color: #45c1c1;
+    background-color: #7f94ad;
     transform: translateY(-1px);
     text-decoration: none; }
 
@@ -4394,7 +4394,7 @@ ol {
   .call strong {
     font-weight: bold; }
   .call svg {
-    fill: #b8e7e7;
+    fill: #dce2e9;
     position: absolute;
     bottom: -9px;
     right: 0;
@@ -4498,7 +4498,7 @@ ol {
 .content blockquote {
   padding: 0 1em;
   color: #5C5A5A;
-  border-left: 0.25em solid #359e9e; }
+  border-left: 0.25em solid #617a98; }
 
 .intro {
   display: flex;
@@ -4590,7 +4590,7 @@ ol {
     transform: skewY(-5deg); }
 
 .strip-primary {
-  background-color: #359e9e; }
+  background-color: #617a98; }
 
 .strip-diagonal-right {
   margin-top: -100px;

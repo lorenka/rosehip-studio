@@ -32,7 +32,7 @@ title = "Rosehip Studio"
     base = "Source Sans Pro"
 
   [params.colors]
-    primary = "#359e9e"
+    primary = "#617a98"
     black = "#2f2f41"
     white = "#ffffff"
     white_offset = "#f6f7ff"
