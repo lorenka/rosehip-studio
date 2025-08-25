@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosehip Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- ANALYTICS SETUP -->
+    <!-- To add Google Analytics: 
+         1. Replace 'GA_MEASUREMENT_ID' below with your actual GA4 Measurement ID (e.g., G-XXXXXXXXXX)
+         2. Uncomment the following two script tags -->
+    <!-- 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    -->
+    
+    <script>
+        // WEBSITE SETTINGS - Easy to edit theme and configuration
+        const SITE_CONFIG = {
+            // THEME SETTINGS
+            colorScheme: 'rose', // Options: 'rose', 'blue', 'green', 'purple', 'orange', 'teal'
+            
+            // WORDMARK SETTINGS
+            useImageLogo: false, // Set to true to use image, false for text
+            logoImageSrc: 'logo.png', // Path to your logo image
+            logoText: 'Rosehip Studio', // Text to display if not using image
+            
+            // CONTENT SETTINGS
+            heroTitle: 'Welcome to Rosehip Studio',
+            heroDescription: 'Crafting beautiful experiences with attention to detail',
+            
+            // SERVICES CONTENT
+            services: [
+                {
+                    image: 'https://images.unsplash.com/photo-1486312338219-ce68e2c6b696?w=400&h=400&fit=crop',
+                    title: 'Design',
+                    description: 'Beautiful, user-centered design solutions'
+                },
+                {
+                    image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=400&fit=crop',
+                    title: 'Development',
+                    description: 'Modern web development with cutting-edge technologies'
+                },
+                {
+                    image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=400&fit=crop',
+                    title: 'Strategy',
+                    description: 'Strategic planning to grow your digital presence'
+                }
+            ],
+            
+            // ABOUT CONTENT
+            aboutImage: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&h=400&fit=crop',
+            aboutDescription: 'We are a creative studio dedicated to bringing your vision to life through thoughtful design and expert development.',
+            
+            // SOCIAL LINKS
+            socialLinks: {
+                instagram: 'https://instagram.com/rosehipstudio',
+                linkedin: 'https://linkedin.com/company/rosehipstudio',
+                twitter: 'https://twitter.com/rosehipstudio',
+                substack: 'https://rosehipstudio.substack.com'
+            }
+        };
+        
+        // Color scheme configurations
+        const colorSchemes = {
+            rose: {
+                primary: 'rose-500',
+                primaryHover: 'rose-600',
+                accent: 'rose-100',
+                border: 'rose-200',
+                text: 'rose-900'
+            },
+            blue: {
+                primary: 'blue-500',
+                primaryHover: 'blue-600',
+                accent: 'blue-100',
+                border: 'blue-200',
+                text: 'blue-900'
+            },
+            green: {
+                primary: 'green-500',
+                primaryHover: 'green-600',
+                accent: 'green-100',
+                border: 'green-200',
+                text: 'green-900'
+            },
+            purple: {
+                primary: 'purple-500',
+                primaryHover: 'purple-600',
+                accent: 'purple-100',
+                border: 'purple-200',
+                text: 'purple-900'
+            },
+            orange: {
+                primary: 'orange-500',
+                primaryHover: 'orange-600',
+                accent: 'orange-100',
+                border: 'orange-200',
+                text: 'orange-900'
+            },
+            teal: {
+                primary: 'teal-500',
+                primaryHover: 'teal-600',
+                accent: 'teal-100',
+                border: 'teal-200',
+                text: 'teal-900'
+            }
+        };
+    </script>
+    
+    <style>
+        .smooth-transition {
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .service-image {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        
+        .service-image:hover {
+            transform: translateY(-2px);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Wordmark -->
+                <div class="flex items-center">
+                    <div id="wordmark" class="text-xl font-bold">Rosehip Studio</div>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#hero" class="nav-link smooth-transition hover:scale-105">Top Hero</a>
+                    <a href="#services" class="nav-link smooth-transition hover:scale-105">Services</a>
+                    <a href="#about" class="nav-link smooth-transition hover:scale-105">About</a>
+                    <a href="#connect" class="nav-link smooth-transition hover:scale-105">Connect</a>
+                </nav>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="mobile-menu-btn smooth-transition">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="#hero" class="nav-link smooth-transition">Top Hero</a>
+                    <a href="#services" class="nav-link smooth-transition">Services</a>
+                    <a href="#about" class="nav-link smooth-transition">About</a>
+                    <a href="#connect" class="nav-link smooth-transition">Connect</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 id="hero-title" class="text-4xl md:text-6xl font-bold mb-6"></h1>
+            <p id="hero-description" class="text-xl text-gray-600 max-w-3xl mx-auto"></p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Services</h2>
+            <div id="services-container" class="grid grid-cols-1 md:grid-cols-3 gap-12"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12">About</h2>
+            <div class="mb-8">
+                <img id="about-image" src="" alt="About Us" class="w-64 h-64 object-cover rounded-full mx-auto mb-8 about-border">
+            </div>
+            <p id="about-description" class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed"></p>
+        </div>
+    </section>
+
+    <!-- Connect Section -->
+    <section id="connect" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12">Connect</h2>
+            
+            <!-- Social Media Links -->
+            <div class="flex justify-center space-x-8 mb-12">
+                <a id="instagram-link" href="" target="_blank" class="social-link smooth-transition hover:scale-110">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987s11.987-5.367 11.987-11.987C24.004 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.078-.611-2.078-1.297 0-.687.781-1.297 2.078-1.297s2.078.61 2.078 1.297c0 .686-.781 1.297-2.078 1.297zm7.718 0c-1.297 0-2.078-.611-2.078-1.297 0-.687.781-1.297 2.078-1.297s2.078.61 2.078 1.297c0 .686-.781 1.297-2.078 1.297z"/>
+                        <rect x="4" y="4" width="16" height="16" rx="5"/>
+                        <path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/>
+                        <circle cx="16.5" cy="7.5" r="1.5"/>
+                    </svg>
+                </a>
+                
+                <a id="linkedin-link" href="" target="_blank" class="social-link smooth-transition hover:scale-110">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </a>
+                
+                <a id="twitter-link" href="" target="_blank" class="social-link smooth-transition hover:scale-110">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <!-- Substack Embed -->
+            <div class="max-w-md mx-auto">
+                <iframe id="substack-embed" src="" width="100%" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-gray-600">&copy; 2025 Rosehip Studio LLC</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize the website with configuration
+        function initializeWebsite() {
+            const scheme = colorSchemes[SITE_CONFIG.colorScheme];
+            
+            // Set up wordmark
+            const wordmarkElement = document.getElementById('wordmark');
+            if (SITE_CONFIG.useImageLogo) {
+                wordmarkElement.innerHTML = `<img src="${SITE_CONFIG.logoImageSrc}" alt="${SITE_CONFIG.logoText}" class="h-8">`;
+            } else {
+                wordmarkElement.textContent = SITE_CONFIG.logoText;
+                wordmarkElement.className += ` text-${scheme.text}`;
+            }
+            
+            // Set up hero content
+            document.getElementById('hero-title').textContent = SITE_CONFIG.heroTitle;
+            document.getElementById('hero-title').className += ` text-${scheme.text}`;
+            document.getElementById('hero-description').textContent = SITE_CONFIG.heroDescription;
+            
+            // Set up services
+            const servicesContainer = document.getElementById('services-container');
+            SITE_CONFIG.services.forEach(service => {
+                const serviceElement = document.createElement('div');
+                serviceElement.className = 'text-center';
+                serviceElement.innerHTML = `
+                    <div class="mb-6">
+                        <img src="${service.image}" alt="${service.title}" 
+                             class="service-image w-32 h-32 object-cover rounded-full mx-auto border-4 border-${scheme.border} shadow-lg">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-${scheme.text}">${service.title}</h3>
+                    <p class="text-gray-600">${service.description}</p>
+                `;
+                servicesContainer.appendChild(serviceElement);
+            });
+            
+            // Set up about section
+            document.getElementById('about-image').src = SITE_CONFIG.aboutImage;
+            document.getElementById('about-image').className += ` border-4 border-${scheme.border}`;
+            document.getElementById('about-description').textContent = SITE_CONFIG.aboutDescription;
+            
+            // Set up social links
+            document.getElementById('instagram-link').href = SITE_CONFIG.socialLinks.instagram;
+            document.getElementById('instagram-link').className += ` text-${scheme.primary} hover:text-${scheme.primaryHover}`;
+            
+            document.getElementById('linkedin-link').href = SITE_CONFIG.socialLinks.linkedin;
+            document.getElementById('linkedin-link').className += ` text-${scheme.primary} hover:text-${scheme.primaryHover}`;
+            
+            document.getElementById('twitter-link').href = SITE_CONFIG.socialLinks.twitter;
+            document.getElementById('twitter-link').className += ` text-${scheme.primary} hover:text-${scheme.primaryHover}`;
+            
+            // Set up Substack embed
+            document.getElementById('substack-embed').src = `${SITE_CONFIG.socialLinks.substack}/embed`;
+            document.getElementById('substack-embed').style.borderColor = `var(--${scheme.border})`;
+            
+            // Style navigation links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.className += ` text-gray-700 hover:text-${scheme.primary}`;
+            });
+            
+            // Style mobile menu button
+            document.getElementById('mobile-menu-button').className += ` text-gray-700 hover:text-${scheme.primary}`;
+            
+            // Style section headers
+            document.querySelectorAll('section h2').forEach(header => {
+                header.className += ` text-${scheme.text}`;
+            });
+        }
+        
+        // Mobile menu functionality
+        function setupMobileMenu() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when clicking on links
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+        
+        // Initialize everything when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeWebsite();
+            setupMobileMenu();
+        });
+    </script>
+</body>
+</html>
