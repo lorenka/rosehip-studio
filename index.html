@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rosehip Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">-->
+
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- ANALYTICS SETUP -->
@@ -27,16 +31,21 @@
             colorScheme: 'rose', // Options: 'rose', 'blue', 'green', 'purple', 'orange', 'teal'
             
             // WORDMARK SETTINGS
-            useImageLogo: false, // Set to true to use image, false for text
-            logoImageSrc: 'logo.png', // Path to your logo image
+            useImageLogo: true, // Set to true to use image, false for text
+            logoImageSrc: 'https://imagedelivery.net/STiYytE0H51mvyiy-w7dEA/3e833bbf-5dd2-47c2-6e55-8b9dcbf08c00/public', // Path to your logo image
             logoText: 'Rosehip Studio', // Text to display if not using image
             
             // CONTENT SETTINGS
-            heroTitle: 'Get Your Creative Idea off the Ground',
+            heroTitle: 'Get Creative',
             heroDescription: 'Crafting beautiful experiences with attention to detail',
             
             // SERVICES CONTENT
             services: [
+                {
+                    image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=400&fit=crop',
+                    title: 'Coaching',
+                    description: 'Strategic planning to grow your digital presence'
+                },
                 {
                     image: 'https://imagedelivery.net/STiYytE0H51mvyiy-w7dEA/7ad48abf-a951-4f49-fe91-c8cea02e7600/public',
                     title: 'Design',
@@ -45,12 +54,7 @@
                 {
                     image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=400&fit=crop',
                     title: 'Development',
-                    description: 'Modern web development with cutting-edge technologies'
-                },
-                {
-                    image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=400&fit=crop',
-                    title: 'Strategy',
-                    description: 'Strategic planning to grow your digital presence'
+                    description: 'Take your business, interested or passion project to the next level.'
                 }
             ],
             
@@ -130,6 +134,11 @@
         html {
             scroll-behavior: smooth;
         }
+        
+        /* Apply Poppins font to wordmark/header */
+        #wordmark {
+            font-family: 'Poppins', sans-serif;
+        }
     </style>
 </head>
 
@@ -175,12 +184,15 @@
     <section id="hero" class="py-20 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto text-center">
             <h1 id="hero-title" class="text-4xl md:text-6xl font-bold mb-6"></h1>
-            <p id="hero-description" class="text-xl text-gray-600 max-w-3xl mx-auto"></p>
+            <p id="hero-description" class="text-xl text-gray-600 max-w-3xl mx-auto mb-8"></p>
+            <div class="max-w-2xl mx-auto">
+                <img src="https://imagedelivery.net/STiYytE0H51mvyiy-w7dEA/0f8e8e94-efe6-4915-31e2-a33f12b04000/public" alt="Latest Project: What's Growing Here?" class="w-full h-64 object-cover">
+            </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="services" class="py-10 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Services</h2>
             <div id="services-container" class="grid grid-cols-1 md:grid-cols-3 gap-12"></div>
@@ -194,7 +206,7 @@
             <!--<div class="mb-8">
                 <img id="about-image" src="" alt="About Us" class="w-64 h-64 object-cover rounded-full mx-auto mb-8 about-border">
             </div>-->
-            <p id="about-description" class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed"></p>
+            <p id="about-description" class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">Rosehip Studio specializes in coaching and custom solution development for small businesses. We help you identify what's holding you back, then build the tools and strategies to move forward. Our own garden inventory SaaS proves we know how to take an idea and successfully move it forward. </p>
         </div>
     </section>
 
@@ -203,36 +215,53 @@
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-12">Connect</h2>
             
-            <!-- Social Media Links -->
-            <div class="flex justify-center space-x-8 mb-12">
-                <a id="instagram-link" href="" target="_blank" class="social-link smooth-transition hover:scale-110">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5a4.25 4.25 0 004.25 4.25h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zM17.5 5.75a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z"/>
-                    </svg>
-                </a>
-                
-                <a id="linkedin-link" href="" target="_blank" class="social-link smooth-transition hover:scale-110">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                </a>
-                
-                <a id="twitter-link" href="" target="_blank" class="social-link smooth-transition hover:scale-110">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                    </svg>
-                </a>
-            </div>
-            
-            <!-- Substack Embed -->
+            <!-- Contact Form -->
             <div class="max-w-md mx-auto">
-                <iframe id="substack-embed" src="" width="100%" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+                <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                    <!-- Replace with your Access Key -->
+                    <input type="hidden" name="access_key" value="baf7b19a-2716-46da-81f3-093c4fae8c96">
+
+                    <!-- Form Inputs. Each input must have a name="" attribute -->
+                    <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500">
+                    <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500">
+                    <textarea name="message" placeholder="Your Message" required rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500"></textarea>
+
+                    <!-- Honeypot Spam Protection -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                    <!-- Custom Confirmation / Success Page -->
+                    <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+
+                    <button type="submit" class="w-full px-6 py-3 bg-rose-500 text-white rounded-lg font-semibold hover:bg-rose-600 smooth-transition">Submit Form</button>
+                </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="py-8 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
+
+        <!-- Social Media Links -->
+        <div class="flex justify-center space-x-8 mb-12">
+            <a id="instagram-link" href="" target="_blank" class="social-link smooth-transition hover:scale-110">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5a4.25 4.25 0 004.25 4.25h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zM17.5 5.75a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z"/>
+                </svg>
+            </a>
+            
+            <a id="linkedin-link" href="" target="_blank" class="social-link smooth-transition hover:scale-110">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+            </a>
+            
+            <a id="twitter-link" href="" target="_blank" class="social-link smooth-transition hover:scale-110">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                </svg>
+            </a>
+        </div>
+
         <div class="max-w-7xl mx-auto text-center">
             <p class="text-gray-600">&copy; 2025 Rosehip Studio LLC</p>
         </div>
@@ -246,7 +275,7 @@
             // Set up wordmark
             const wordmarkElement = document.getElementById('wordmark');
             if (SITE_CONFIG.useImageLogo) {
-                wordmarkElement.innerHTML = `<img src="${SITE_CONFIG.logoImageSrc}" alt="${SITE_CONFIG.logoText}" class="h-8">`;
+                wordmarkElement.innerHTML = `<img src="${SITE_CONFIG.logoImageSrc}" alt="${SITE_CONFIG.logoText}" class="h-16">`;
             } else {
                 wordmarkElement.textContent = SITE_CONFIG.logoText;
                 wordmarkElement.className += ` text-${scheme.text}`;
@@ -274,8 +303,7 @@
             });
             
             // Set up about section
-            document.getElementById('about-image').src = SITE_CONFIG.aboutImage;
-            document.getElementById('about-image').className += ` border-4 border-${scheme.border}`;
+            // Note: about-image is commented out in HTML
             document.getElementById('about-description').textContent = SITE_CONFIG.aboutDescription;
             
             // Set up social links
@@ -288,9 +316,6 @@
             document.getElementById('twitter-link').href = SITE_CONFIG.socialLinks.twitter;
             document.getElementById('twitter-link').className += ` text-${scheme.primary} hover:text-${scheme.primaryHover}`;
             
-            // Set up Substack embed
-            document.getElementById('substack-embed').src = `${SITE_CONFIG.socialLinks.substack}/embed`;
-            document.getElementById('substack-embed').style.borderColor = `var(--${scheme.border})`;
             
             // Style navigation links
             document.querySelectorAll('.nav-link').forEach(link => {
