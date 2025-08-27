@@ -6,7 +6,7 @@
     <title>Rosehip Studio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!--<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes:wght@400&display=swap" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -36,15 +36,15 @@
             logoText: 'Rosehip Studio', // Text to display if not using image
             
             // CONTENT SETTINGS
-            heroTitle: 'Get Creative',
-            heroDescription: 'Crafting beautiful experiences with attention to detail',
+            heroTitle: 'Get Creative\!',
+            heroDescription: 'Our newest product: Check out <a href="https://whatsgrowinghere.com" target="_blank" class="text-rose-500 hover:text-rose-600 underline">What\'s Growing Here</a>',
             
             // SERVICES CONTENT
             services: [
                 {
                     image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=400&fit=crop',
                     title: 'Coaching',
-                    description: 'Strategic planning to grow your digital presence'
+                    description: 'Craft beautiful experiences with attention to detail'
                 },
                 {
                     image: 'https://imagedelivery.net/STiYytE0H51mvyiy-w7dEA/7ad48abf-a951-4f49-fe91-c8cea02e7600/public',
@@ -135,9 +135,10 @@
             scroll-behavior: smooth;
         }
         
-        /* Apply Poppins font to wordmark/header */
-        #wordmark {
-            font-family: 'Poppins', sans-serif;
+        /* Apply Great Vibes font to hero title */
+        #hero-title {
+            font-family: 'Great Vibes', cursive;
+            font-weight: 400;
         }
     </style>
 </head>
@@ -186,7 +187,7 @@
             <h1 id="hero-title" class="text-4xl md:text-6xl font-bold mb-6"></h1>
             <p id="hero-description" class="text-xl text-gray-600 max-w-3xl mx-auto mb-8"></p>
             <div class="max-w-2xl mx-auto">
-                <img src="https://imagedelivery.net/STiYytE0H51mvyiy-w7dEA/0f8e8e94-efe6-4915-31e2-a33f12b04000/public" alt="Latest Project: What's Growing Here?" class="w-full h-64 object-cover">
+                <img href="" src="https://imagedelivery.net/STiYytE0H51mvyiy-w7dEA/0f8e8e94-efe6-4915-31e2-a33f12b04000/public" alt="Latest Project: What's Growing Here?" class="rose-600 w-full h-64 object-cover">
             </div>
         </div>
     </section>
@@ -284,7 +285,7 @@
             // Set up hero content
             document.getElementById('hero-title').textContent = SITE_CONFIG.heroTitle;
             document.getElementById('hero-title').className += ` text-${scheme.text}`;
-            document.getElementById('hero-description').textContent = SITE_CONFIG.heroDescription;
+            document.getElementById('hero-description').innerHTML = SITE_CONFIG.heroDescription;
             
             // Set up services
             const servicesContainer = document.getElementById('services-container');
