@@ -1,0 +1,111 @@
+---
+import ContactCTA from '../../components/ContactCTA.astro';
+import Hero from '../../components/Hero.astro';
+import Icon from '../../components/Icon.astro';
+import Pill from '../../components/Pill.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import GBBOViz from '../../components/GBBOViz.jsx';
+---
+
+<BaseLayout
+	title="Love for the Great British Baking Show | Rosehip Studio"
+	description="An interactive D3 visualization of technical challenges across four seasons of the Great British Baking Show."
+>
+	<div class="stack gap-20">
+		<div class="stack gap-15">
+			<header>
+				<div class="wrapper stack gap-2">
+					<a class="back-link" href="/work/"><Icon icon="arrow-left" /> Work</a>
+					<Hero title="Love for the Great British Baking Show" align="start">
+						<div class="details">
+							<div class="tags">
+								<Pill>Data Viz</Pill>
+								<Pill>D3</Pill>
+								<Pill>Interactive</Pill>
+							</div>
+							<p class="description">
+								An interactive D3 visualization of technical challenges across four seasons —
+								a force-radial chart and dendrogram exploring the themes and ingredients behind the recipes.
+							</p>
+						</div>
+					</Hero>
+				</div>
+			</header>
+			<main class="wrapper">
+				<div class="stack gap-10 content">
+					<p>
+						I rediscovered the Great British Baking Show and fell in love with the people of Britain
+						from a wide variety of backgrounds all linked by an obsession with baking.
+					</p>
+					<p>
+						The dots in the concentric circles represent technical challenges by season.
+						While not all of the recipes in this list are sweet enough to be considered desserts,
+						many of them have sugar. Data was gathered by hand while drooling over the photos.
+					</p>
+					<GBBOViz client:load />
+				</div>
+			</main>
+		</div>
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	header {
+		padding-bottom: 2.5rem;
+		border-bottom: 1px solid var(--gray-800);
+	}
+
+	.back-link {
+		display: none;
+	}
+
+	.details {
+		display: flex;
+		flex-direction: column;
+		padding: 0.5rem;
+		gap: 1.5rem;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.tags {
+		display: flex;
+		gap: 0.5rem;
+	}
+
+	.description {
+		font-size: var(--text-lg);
+		max-width: 54ch;
+	}
+
+	.content {
+		max-width: 800px;
+		margin-inline: auto;
+	}
+
+	.content > :global(* + *) {
+		margin-top: 1rem;
+	}
+
+	.content :global(.gbbo-viz section) {
+		margin-top: 2rem;
+	}
+
+	.content :global(.gbbo-viz h3) {
+		font-size: var(--text-xl);
+		margin-bottom: 0.5rem;
+	}
+
+	@media (min-width: 50em) {
+		.back-link {
+			display: block;
+			align-self: flex-start;
+		}
+
+		.details {
+			flex-direction: row;
+			gap: 2.5rem;
+		}
+	}
+</style>

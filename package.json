@@ -12,6 +12,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^7.0.0"
+    "@astrojs/react": "^6.0.0",
+    "astro": "^7.0.0",
+    "d3": "^7.9.0",
+    "node-vibrant": "^4.0.4",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
   }
 }

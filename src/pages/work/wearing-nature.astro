@@ -1,0 +1,98 @@
+---
+import ContactCTA from '../../components/ContactCTA.astro';
+import Hero from '../../components/Hero.astro';
+import Icon from '../../components/Icon.astro';
+import Pill from '../../components/Pill.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import WearingNature from '../../components/WearingNature.jsx';
+---
+
+<BaseLayout
+	title="Wearing Nature | Rosehip Studio"
+	description="What colors does San Francisco wear? An interactive palette extractor from three SF landscape photographs."
+>
+	<div class="stack gap-20">
+		<div class="stack gap-15">
+			<header>
+				<div class="wrapper stack gap-2">
+					<a class="back-link" href="/work/"><Icon icon="arrow-left" /> Work</a>
+					<Hero title="Wearing Nature" align="start">
+						<div class="details">
+							<div class="tags">
+								<Pill>Interactive</Pill>
+								<Pill>Color</Pill>
+								<Pill>Design</Pill>
+							</div>
+							<p class="description">
+								What colors does San Francisco wear? An interactive palette extractor
+								that pulls the dominant hues from three SF landscape photographs.
+							</p>
+						</div>
+					</Hero>
+				</div>
+			</header>
+			<main class="wrapper">
+				<div class="stack gap-10 content">
+					<p>
+						Each image carries a hidden color story. Node-vibrant analyzes the pixel data and
+						surfaces six swatches — Vibrant, Light Vibrant, Dark Vibrant, Muted, Light Muted,
+						and Dark Muted. Click any swatch to copy its hex code.
+					</p>
+					<WearingNature client:load />
+				</div>
+			</main>
+		</div>
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	header {
+		padding-bottom: 2.5rem;
+		border-bottom: 1px solid var(--gray-800);
+	}
+
+	.back-link {
+		display: none;
+	}
+
+	.details {
+		display: flex;
+		flex-direction: column;
+		padding: 0.5rem;
+		gap: 1.5rem;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.tags {
+		display: flex;
+		gap: 0.5rem;
+	}
+
+	.description {
+		font-size: var(--text-lg);
+		max-width: 54ch;
+	}
+
+	.content {
+		max-width: 700px;
+		margin-inline: auto;
+	}
+
+	.content > :global(* + *) {
+		margin-top: 1rem;
+	}
+
+	@media (min-width: 50em) {
+		.back-link {
+			display: block;
+			align-self: flex-start;
+		}
+
+		.details {
+			flex-direction: row;
+			gap: 2.5rem;
+		}
+	}
+</style>

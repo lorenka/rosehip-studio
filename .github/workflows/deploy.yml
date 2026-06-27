@@ -21,8 +21,27 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Check required PUBLIC_ secrets
+        env:
+          PUBLIC_UNSPLASH_ACCESS_KEY: ${{ secrets.PUBLIC_UNSPLASH_ACCESS_KEY }}
+        run: |
+          # Each PUBLIC_ var an island needs at build time should be listed here.
+          # Missing values warn (not fail) so the deploy still ships, but the
+          # gap is loud in the run summary. See AGENTS.md.
+          missing=0
+          for var in PUBLIC_UNSPLASH_ACCESS_KEY; do
+            if [ -z "${!var}" ]; then
+              echo "::warning title=Missing secret::$var is empty — add it with 'gh secret set $var'. The deployed site feature that uses it will be broken."
+              echo "- ⚠️ \`$var\` is not set as a repo secret" >> "$GITHUB_STEP_SUMMARY"
+              missing=1
+            fi
+          done
+          [ "$missing" -eq 0 ] && echo "All required PUBLIC_ secrets present ✓" >> "$GITHUB_STEP_SUMMARY"
+
       - name: Build Astro site
         uses: withastro/action@v4
+        env:
+          PUBLIC_UNSPLASH_ACCESS_KEY: ${{ secrets.PUBLIC_UNSPLASH_ACCESS_KEY }}
 
   deploy:
     needs: build
