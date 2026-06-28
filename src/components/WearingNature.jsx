@@ -37,10 +37,8 @@ const OUTFIT_SLOTS = [
 
 // ─── Color utilities ────────────────────────────────────────────────────────
 
-function hexToHsl(hex) {
-	const r = parseInt(hex.slice(1, 3), 16) / 255;
-	const g = parseInt(hex.slice(3, 5), 16) / 255;
-	const b = parseInt(hex.slice(5, 7), 16) / 255;
+function rgbToHsl(r, g, b) {
+	r /= 255; g /= 255; b /= 255;
 	const max = Math.max(r, g, b), min = Math.min(r, g, b);
 	const l = (max + min) / 2;
 	if (max === min) return { h: 0, s: 0, l };
@@ -51,6 +49,14 @@ function hexToHsl(hex) {
 	else if (max === g) h = ((b - r) / d + 2) / 6;
 	else                h = ((r - g) / d + 4) / 6;
 	return { h: h * 360, s, l };
+}
+
+function hexToHsl(hex) {
+	return rgbToHsl(
+		parseInt(hex.slice(1, 3), 16),
+		parseInt(hex.slice(3, 5), 16),
+		parseInt(hex.slice(5, 7), 16),
+	);
 }
 
 function hexToColorName(hex) {
@@ -68,20 +74,71 @@ function hexToColorName(hex) {
 	return 'pink';
 }
 
-// Maps our color names to Unsplash's supported color filter values
-const UNSPLASH_COLOR_MAP = {
-	red:    'red',
-	orange: 'orange',
-	yellow: 'yellow',
-	green:  'green',
-	teal:   'teal',
-	blue:   'blue',
-	purple: 'purple',
-	pink:   'magenta',
-	gray:   'black_and_white',
-	black:  'black',
-	white:  'white',
-};
+// ─── Subject-color matching ──────────────────────────────────────────────────
+// Unsplash's color filter keys off an image's *dominant* color, which is usually
+// the background (grey shoes on grass read as "green"). To match the focal item
+// instead, we sample each candidate's center region, take its dominant color
+// *by area* — so a neutral subject reads neutral even on a saturated background —
+// and rank candidates by closeness to the selected swatch.
+
+const SCORE_CANDIDATES = 12;   // how many search results to color-check
+const CENTER_FRACTION  = 0.5;  // central portion of the image to sample
+
+function loadImage(src) {
+	return new Promise((resolve, reject) => {
+		const img = new Image();
+		img.crossOrigin = 'anonymous';
+		img.onload  = () => resolve(img);
+		img.onerror = reject;
+		img.src = src;
+	});
+}
+
+// Dominant color of the image's center region as {h, s, l}, or null on failure.
+async function centerColor(src) {
+	try {
+		const img = await loadImage(src);
+		const W = 64, H = 64;
+		const canvas = document.createElement('canvas');
+		canvas.width = W; canvas.height = H;
+		const ctx = canvas.getContext('2d', { willReadFrequently: true });
+		ctx.drawImage(img, 0, 0, W, H);
+
+		const margin = (1 - CENTER_FRACTION) / 2;
+		const { data } = ctx.getImageData(
+			Math.floor(W * margin), Math.floor(H * margin),
+			Math.ceil(W * CENTER_FRACTION), Math.ceil(H * CENTER_FRACTION),
+		);
+
+		// Bucket pixels and keep the most populous bucket (dominant by area).
+		const bins = new Map();
+		for (let i = 0; i < data.length; i += 4) {
+			if (data[i + 3] < 128) continue;  // skip transparent
+			const { h, s, l } = rgbToHsl(data[i], data[i + 1], data[i + 2]);
+			const key = s < 0.15
+				? `n${Math.round(l * 4)}`                  // neutral: bucket by lightness
+				: `${Math.round(h / 30)}:${Math.round(l * 3)}`;
+			const bin = bins.get(key) || { n: 0, h: 0, s: 0, l: 0 };
+			bin.n++; bin.h += h; bin.s += s; bin.l += l;
+			bins.set(key, bin);
+		}
+		let best = null;
+		for (const bin of bins.values()) if (!best || bin.n > best.n) best = bin;
+		return best ? { h: best.h / best.n, s: best.s / best.n, l: best.l / best.n } : null;
+	} catch {
+		return null;  // image load or tainted-canvas failure
+	}
+}
+
+// Distance in a chroma plane, so neutral and saturated colors never falsely
+// match (a grey subject sits near the origin, far from any vivid hue).
+function colorDistance(c1, c2) {
+	const a1 = c1.s * Math.cos(c1.h * Math.PI / 180);
+	const b1 = c1.s * Math.sin(c1.h * Math.PI / 180);
+	const a2 = c2.s * Math.cos(c2.h * Math.PI / 180);
+	const b2 = c2.s * Math.sin(c2.h * Math.PI / 180);
+	return Math.hypot(a1 - a2, b1 - b2, (c1.l - c2.l) * 0.5);
+}
 
 // ─── Unsplash fetch ──────────────────────────────────────────────────────────
 
@@ -89,17 +146,31 @@ async function fetchGarment(hex, slotQuery) {
 	const key = import.meta.env.PUBLIC_UNSPLASH_ACCESS_KEY;
 	if (!key) return { error: 'no_key' };
 
-	const colorName     = hexToColorName(hex);
-	const unsplashColor = UNSPLASH_COLOR_MAP[colorName] ?? 'black';
-	const query         = `${colorName} ${slotQuery}`;
+	const colorName = hexToColorName(hex);
+	// #1: drop the whole-image color filter (it selects background-colored shots)
+	// and bias the text query toward clean, focal-subject photography instead.
+	const query = `${colorName} ${slotQuery} plain background`;
 
 	try {
 		const res  = await fetch(
-			`https://api.unsplash.com/search/photos?query=${encodeURIComponent(query)}&color=${unsplashColor}&per_page=30&content_filter=high&client_id=${key}`
+			`https://api.unsplash.com/search/photos?query=${encodeURIComponent(query)}&per_page=30&content_filter=high&client_id=${key}`
 		);
 		const data = await res.json();
 		if (!data.results?.length) return null;
-		const pick = data.results[Math.floor(Math.random() * data.results.length)];
+
+		// #2: rank candidates by how closely their focal subject matches the swatch.
+		const target     = hexToHsl(hex);
+		const candidates = data.results.slice(0, SCORE_CANDIDATES);
+		const scored     = await Promise.all(candidates.map(async (c) => {
+			const cc = await centerColor(c.urls.small);
+			return { c, dist: cc ? colorDistance(cc, target) : Infinity };
+		}));
+		scored.sort((a, b) => a.dist - b.dist);
+
+		// Best subject match, or a random result if color-checking failed (e.g. CORS).
+		const pick = scored[0]?.dist < Infinity
+			? scored[0].c
+			: data.results[Math.floor(Math.random() * data.results.length)];
 		return {
 			url:        pick.urls.regular,
 			thumb:      pick.urls.small,
