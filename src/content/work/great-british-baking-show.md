@@ -1,6 +1,6 @@
 ---
 title: Love for the Great British Baking Show
-publishDate: 2018-11-20 00:00:00
+publishDate: 2026-01-01 00:00:00
 img: /assets/gbbs.png
 img_alt: Colorful dots arranged in concentric circles representing baking recipes by season
 description: |
