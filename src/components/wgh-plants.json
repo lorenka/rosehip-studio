@@ -1,0 +1,386 @@
+[
+	{
+		"latin": "Cucurbita pepo var. turbinata",
+		"common": "Acorn Squash"
+	},
+	{
+		"latin": "Cynara cardunculus var. scolymus",
+		"common": "Artichoke"
+	},
+	{
+		"latin": "Eruca vesicaria",
+		"common": "Arugula"
+	},
+	{
+		"latin": "Asparagus officinalis",
+		"common": "Asparagus"
+	},
+	{
+		"latin": "Bambusa oldhamii",
+		"common": "Bamboo Shoots"
+	},
+	{
+		"latin": "Beta vulgaris subsp. vulgaris",
+		"common": "Beet"
+	},
+	{
+		"latin": "Capsicum annuum var. grossum",
+		"common": "Bell Pepper"
+	},
+	{
+		"latin": "Brassica rapa subsp. chinensis",
+		"common": "Bok Choy"
+	},
+	{
+		"latin": "Brassica oleracea var. italica",
+		"common": "Broccoli"
+	},
+	{
+		"latin": "Brassica oleracea var. gemmifera",
+		"common": "Brussels Sprouts"
+	},
+	{
+		"latin": "Arctium lappa",
+		"common": "Burdock Root"
+	},
+	{
+		"latin": "Cucurbita moschata",
+		"common": "Butternut Squash"
+	},
+	{
+		"latin": "Brassica oleracea var. capitata",
+		"common": "Cabbage"
+	},
+	{
+		"latin": "Brassica oleracea var. capitata f. rubra",
+		"common": "Cabbage (Red)"
+	},
+	{
+		"latin": "Cynara cardunculus var. altilis",
+		"common": "Cardoon"
+	},
+	{
+		"latin": "Daucus carota subsp. sativus",
+		"common": "Carrot"
+	},
+	{
+		"latin": "Manihot esculenta",
+		"common": "Cassava"
+	},
+	{
+		"latin": "Brassica oleracea var. botrytis",
+		"common": "Cauliflower"
+	},
+	{
+		"latin": "Apium graveolens var. rapaceum",
+		"common": "Celeriac"
+	},
+	{
+		"latin": "Apium graveolens var. dulce",
+		"common": "Celery"
+	},
+	{
+		"latin": "Beta vulgaris subsp. cicla",
+		"common": "Chard (Swiss Chard)"
+	},
+	{
+		"latin": "Sechium edule",
+		"common": "Chayote"
+	},
+	{
+		"latin": "Cichorium intybus var. intybus",
+		"common": "Chicory"
+	},
+	{
+		"latin": "Brassica oleracea var. alboglabra",
+		"common": "Chinese Broccoli"
+	},
+	{
+		"latin": "Brassica rapa subsp. pekinensis",
+		"common": "Chinese Cabbage"
+	},
+	{
+		"latin": "Allium schoenoprasum",
+		"common": "Chives"
+	},
+	{
+		"latin": "Brassica oleracea var. viridis",
+		"common": "Collard Greens"
+	},
+	{
+		"latin": "Zea mays subsp. mays",
+		"common": "Corn"
+	},
+	{
+		"latin": "Cucumis sativus",
+		"common": "Cucumber"
+	},
+	{
+		"latin": "Raphanus sativus var. longipinnatus",
+		"common": "Daikon"
+	},
+	{
+		"latin": "Cucurbita pepo var. delicata",
+		"common": "Delicata Squash"
+	},
+	{
+		"latin": "Solanum melongena var. esculentum",
+		"common": "Eggplant"
+	},
+	{
+		"latin": "Cichorium endivia var. crispum",
+		"common": "Endive"
+	},
+	{
+		"latin": "Cichorium endivia var. latifolia",
+		"common": "Escarole"
+	},
+	{
+		"latin": "Vicia faba",
+		"common": "Fava Beans"
+	},
+	{
+		"latin": "Foeniculum vulgare var. azoricum",
+		"common": "Fennel"
+	},
+	{
+		"latin": "Allium sativum",
+		"common": "Garlic"
+	},
+	{
+		"latin": "Zingiber officinale",
+		"common": "Ginger"
+	},
+	{
+		"latin": "Phaseolus vulgaris",
+		"common": "Green Beans"
+	},
+	{
+		"latin": "Armoracia rusticana",
+		"common": "Horseradish"
+	},
+	{
+		"latin": "Cucurbita maxima var. hubbardi",
+		"common": "Hubbard Squash"
+	},
+	{
+		"latin": "Helianthus tuberosus",
+		"common": "Jerusalem Artichoke"
+	},
+	{
+		"latin": "Pachyrhizus erosus",
+		"common": "Jicama"
+	},
+	{
+		"latin": "Cucurbita maxima var. maxima",
+		"common": "Kabocha Squash"
+	},
+	{
+		"latin": "Brassica oleracea var. acephala",
+		"common": "Kale"
+	},
+	{
+		"latin": "Brassica oleracea var. gongylodes",
+		"common": "Kohlrabi"
+	},
+	{
+		"latin": "Allium ampeloprasum var. porrum",
+		"common": "Leek"
+	},
+	{
+		"latin": "Lactuca sativa",
+		"common": "Lettuce"
+	},
+	{
+		"latin": "Phaseolus lunatus",
+		"common": "Lima Beans"
+	},
+	{
+		"latin": "Nelumbo nucifera",
+		"common": "Lotus Root"
+	},
+	{
+		"latin": "Valerianella locusta var. olitoria",
+		"common": "Mache (Corn Salad)"
+	},
+	{
+		"latin": "Xanthosoma sagittifolium",
+		"common": "Malanga"
+	},
+	{
+		"latin": "Brassica rapa var. nipposinica",
+		"common": "Mizuna"
+	},
+	{
+		"latin": "Agaricus bisporus",
+		"common": "Mushroom (Button)"
+	},
+	{
+		"latin": "Brassica juncea",
+		"common": "Mustard Greens"
+	},
+	{
+		"latin": "Abelmoschus esculentus",
+		"common": "Okra"
+	},
+	{
+		"latin": "Allium cepa",
+		"common": "Onion"
+	},
+	{
+		"latin": "Petroselinum crispum var. tuberosum",
+		"common": "Parsley Root"
+	},
+	{
+		"latin": "Pastinaca sativa",
+		"common": "Parsnip"
+	},
+	{
+		"latin": "Pisum sativum var. sativum",
+		"common": "Peas"
+	},
+	{
+		"latin": "Musa × paradisiaca",
+		"common": "Plantain"
+	},
+	{
+		"latin": "Capsicum annuum var. poblano",
+		"common": "Poblano Pepper"
+	},
+	{
+		"latin": "Agaricus bisporus var. portobello",
+		"common": "Portobello Mushroom"
+	},
+	{
+		"latin": "Solanum tuberosum",
+		"common": "Potato"
+	},
+	{
+		"latin": "Cucurbita pepo var. pepo",
+		"common": "Pumpkin"
+	},
+	{
+		"latin": "Portulaca oleracea",
+		"common": "Purslane"
+	},
+	{
+		"latin": "Cichorium intybus var. foliosum",
+		"common": "Radicchio"
+	},
+	{
+		"latin": "Raphanus sativus var. sativus",
+		"common": "Radish"
+	},
+	{
+		"latin": "Brassica napus var. napobrassica",
+		"common": "Rutabaga"
+	},
+	{
+		"latin": "Tragopogon porrifolius",
+		"common": "Salsify"
+	},
+	{
+		"latin": "Allium fistulosum",
+		"common": "Scallions"
+	},
+	{
+		"latin": "Allium cepa var. aggregatum",
+		"common": "Shallot"
+	},
+	{
+		"latin": "Pisum sativum var. saccharatum",
+		"common": "Snow Peas"
+	},
+	{
+		"latin": "Rumex acetosa",
+		"common": "Sorrel"
+	},
+	{
+		"latin": "Cucurbita pepo var. fastigata",
+		"common": "Spaghetti Squash"
+	},
+	{
+		"latin": "Spinacia oleracea",
+		"common": "Spinach"
+	},
+	{
+		"latin": "Pisum sativum var. macrocarpon",
+		"common": "Sugar Snap Peas"
+	},
+	{
+		"latin": "Ipomoea batatas",
+		"common": "Sweet Potato"
+	},
+	{
+		"latin": "Colocasia esculenta",
+		"common": "Taro"
+	},
+	{
+		"latin": "Brassica rapa subsp. narinosa",
+		"common": "Tatsoi"
+	},
+	{
+		"latin": "Ocimum basilicum var. thyrsiflora",
+		"common": "Thai Basil"
+	},
+	{
+		"latin": "Physalis philadelphica",
+		"common": "Tomatillo"
+	},
+	{
+		"latin": "Solanum lycopersicum",
+		"common": "Tomato"
+	},
+	{
+		"latin": "Bunias orientalis",
+		"common": "Turkish Rocket"
+	},
+	{
+		"latin": "Curcuma longa",
+		"common": "Turmeric"
+	},
+	{
+		"latin": "Brassica rapa subsp. rapa",
+		"common": "Turnip"
+	},
+	{
+		"latin": "Ullucus tuberosus",
+		"common": "Ulluco"
+	},
+	{
+		"latin": "Viola odorata",
+		"common": "Violet Leaves"
+	},
+	{
+		"latin": "Eutrema japonicum",
+		"common": "Wasabi"
+	},
+	{
+		"latin": "Ipomoea aquatica",
+		"common": "Water Spinach"
+	},
+	{
+		"latin": "Nasturtium officinale",
+		"common": "Watercress"
+	},
+	{
+		"latin": "Benincasa hispida",
+		"common": "Winter Melon"
+	},
+	{
+		"latin": "Smallanthus sonchifolius",
+		"common": "Yacon"
+	},
+	{
+		"latin": "Dioscorea alata",
+		"common": "Yam"
+	},
+	{
+		"latin": "Cucurbita pepo var. melopepo",
+		"common": "Yellow Squash"
+	},
+	{
+		"latin": "Cucurbita pepo var. cylindrica",
+		"common": "Zucchini"
+	}
+]
