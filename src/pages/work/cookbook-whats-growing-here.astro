@@ -48,15 +48,20 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 					/>
 					<p>
 						Read the whole thing right here — or
-						<a href="/cookbook/" target="_blank" rel="noopener">open it
-						full-page in a new tab</a>.
+						<a href="/cookbook.pdf" target="_blank" rel="noopener">open the
+						PDF in a new tab</a>.
 					</p>
-					<iframe
+					<object
 						class="cookbook-frame"
-						src="/cookbook/"
+						data="/cookbook.pdf"
+						type="application/pdf"
 						title="Building a Garden App — Five Recipes cookbook"
-						loading="lazy"
-					></iframe>
+					>
+						<p class="pdf-fallback">
+							Your browser doesn't display PDFs inline —
+							<a href="/cookbook.pdf">download the cookbook</a> instead.
+						</p>
+					</object>
 				</div>
 			</main>
 		</div>
@@ -127,6 +132,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 		border-radius: 1.5rem;
 		box-shadow: var(--shadow-md);
 		background: #faf9f7;
+	}
+
+	.pdf-fallback {
+		padding: 2rem;
+		text-align: center;
 	}
 
 	@media (min-width: 50em) {
